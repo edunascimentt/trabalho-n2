@@ -1,8 +1,8 @@
 /* Trabalho N2 de Algoritmos I
  * Equipe:
- *   João Eduardo
- *   Eduardo Kauã
- *   Kaue Paulino
+ * João Eduardo
+ * Eduardo Kauã
+ * Kaue Paulino
  */
 
 /* parte do João Eduardo ///////////////////////////////////////////////////////*/
@@ -52,6 +52,29 @@ int main(void)
         /* Soma das compras e utilizamos preco[compra[i]] = Qual o preco do roduto que o cliente i comprou  */
         total = total + preco[compra[i]];
     }
+    
+    /* parte do Kaue ///////////////////////////////////////////////////////*/
+
+    /* Exibicao formatada do cabecalho da simulacao */
+    printf("Simulacao para:\n");
+    printf("%d produtos\n", npro);
+    printf("%d clientes\n\n", ncli);
+
+    /* Cabecalho da tabela alinhado por tabulacao (\t) */
+    printf("Cliente\tProduto\tValor (R$)\n");
+
+    /* Loop para imprimir a relacao de cada cliente, produto comprado e valor */
+    for (i = 0; i < ncli; i++)
+    {
+        printf("%d\t%d\t%.2f\n", i, compra[i], preco[compra[i]]);
+    }
+
+    /* Exibicao do total geral acumulado formatado com duas casas decimais */
+    printf("\nTOTAL DE VENDAS\t%.2f\n", total);
+
+    /* Pausa padrao para aguardar a leitura antes de fechar a janela */
+    printf("\nPressione ENTER para continuar.\n");
+    getchar();
     
     return 0;
 }
